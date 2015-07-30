@@ -49,21 +49,21 @@ namespace SwiftSync
             foreach (String file in FileUtil.GetFiles(cfg.BoxFolder))
             {
                 System.IO.FileInfo fi = new System.IO.FileInfo(file);
-                txtLog.Text += "Uploading file " + file + "\r\n";
-                client.CreateObject("box",fi.Name, fi.DirectoryName.Substring(cfg.BoxFolder.Length));
+                txtLog.Text += "Uploading file " + file + "\r\n" + fi.Name;
+                client.CreateObject("test1",fi.Name,fi.DirectoryName.Substring(cfg.BoxFolder.Length));
             }
         }
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
             txtLog.Text += "Downloading...\r\n";
-            List<SwiftFileInfo> swiftFileList = client.GetObjectList("box");
+            List<SwiftFileInfo> swiftFileList = client.GetObjectList("test1");
             foreach (SwiftFileInfo swiftFileInfo in swiftFileList)
             {
                 if (!String.IsNullOrEmpty(swiftFileInfo.name))
                 {
                     txtLog.Text += "downloading " + swiftFileInfo.name + "\r\n";
-                    client.GetObject("box/" + swiftFileInfo.name);
+                    client.GetObject("test1/" + swiftFileInfo.name);
                 }
             }
         }

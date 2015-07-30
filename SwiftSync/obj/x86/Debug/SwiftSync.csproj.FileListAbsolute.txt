@@ -11,3 +11,15 @@ C:\Dev\openstack\swiftbox\SwiftSync\bin\Debug\SwiftLib.pdb
 C:\Dev\openstack\swiftbox\SwiftSync\obj\x86\Debug\SwiftSync.exe
 C:\Dev\openstack\swiftbox\SwiftSync\obj\x86\Debug\SwiftSync.pdb
 C:\Dev\openstack\swiftbox\SwiftSync\bin\Debug\SwiftSync.exe.config
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Debug\SwiftSync.exe.config
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Debug\SwiftSync.exe
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Debug\SwiftSync.pdb
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Debug\SwiftSync.exe
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Debug\SwiftSync.pdb
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Debug\SwiftLib.dll
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Debug\RestSharp.dll
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Debug\SwiftLib.pdb
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Debug\SwiftSync.csprojResolveAssemblyReference.cache
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Debug\SwiftSync.Form1.resources
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Debug\SwiftSync.Properties.Resources.resources
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Debug\SwiftSync.csproj.GenerateResource.Cache

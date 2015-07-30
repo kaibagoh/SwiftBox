@@ -1,0 +1,12 @@
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Release\SwiftSync.exe.config
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Release\SwiftSync.exe
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Release\SwiftSync.pdb
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Release\SwiftLib.dll
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Release\RestSharp.dll
+C:\Users\dsi\SwiftBox\SwiftSync\bin\Release\SwiftLib.pdb
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Release\SwiftSync.csprojResolveAssemblyReference.cache
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Release\SwiftSync.Form1.resources
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Release\SwiftSync.Properties.Resources.resources
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Release\SwiftSync.csproj.GenerateResource.Cache
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Release\SwiftSync.exe
+C:\Users\dsi\SwiftBox\SwiftSync\obj\x86\Release\SwiftSync.pdb

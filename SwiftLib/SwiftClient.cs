@@ -13,8 +13,8 @@ namespace SwiftLib
     {
         private SwiftConfig cfg;
         private RestClient rc;
-        private String storageUrl = null;
-        private String authToken = null;
+        private String storageUrl = "http://192.168.35.135:8080/v1/AUTH_b120c22a8e964b549e107b926bcbffab";
+        private String authToken = "eafe7c2053b849bfa65dd79468a00c0a";
 
         public SwiftClient(SwiftConfig cfg)
         {
@@ -26,7 +26,7 @@ namespace SwiftLib
         public void Authenticate()
         {
             RestClient rc = GetRestClient();
-            RestRequest request = new RestRequest("auth/v1.0/", Method.GET);
+            RestRequest request = new RestRequest("v3/", Method.GET);
             request.AddHeader("X-Auth-User", cfg.User);
             request.AddHeader("X-Auth-Key", cfg.Authkey);
             IRestResponse response = rc.Execute(request);
@@ -109,7 +109,7 @@ namespace SwiftLib
             IRestRequest request = GetRequest(storageUrl + "/" + containerName + "/" + fullObjectName.Replace("\\","/"), Method.PUT);
             request.AddFile(objectName, Path.Combine(cfg.BoxFolder, fullObjectName));
             IRestResponse response = rc.Execute(request);
-            if (response.StatusCode != System.Net.HttpStatusCode.OK &&
+           if (response.StatusCode != System.Net.HttpStatusCode.OK &&
                 response.StatusCode != System.Net.HttpStatusCode.Created)
             {
                 throw new Exception("Error in creating object. Error:" + response.ToString());

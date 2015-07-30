@@ -1,0 +1,5 @@
+C:\Users\dsi\SwiftBox\SwiftLib\bin\Release\SwiftLib.dll
+C:\Users\dsi\SwiftBox\SwiftLib\bin\Release\SwiftLib.pdb
+C:\Users\dsi\SwiftBox\SwiftLib\bin\Release\RestSharp.dll
+C:\Users\dsi\SwiftBox\SwiftLib\obj\Release\SwiftLib.dll
+C:\Users\dsi\SwiftBox\SwiftLib\obj\Release\SwiftLib.pdb
