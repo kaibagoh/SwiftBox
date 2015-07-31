@@ -28,6 +28,13 @@ namespace SwiftLib
             get { return authkey; }
             set { authkey = value; }
         }
+        private string tenantId;
+
+        public string TenantId
+        {
+            get { return tenantId; }
+            set { tenantId = value; }
+        }
 
         private string boxFolder;
 
