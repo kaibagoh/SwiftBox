@@ -13,8 +13,8 @@ namespace SwiftLib
     {
         private SwiftConfig cfg;
         private RestClient rc;
-        private String storageUrl = "http://192.168.35.135:8080/v1/AUTH_b120c22a8e964b549e107b926bcbffab";
-        private String authToken = "eafe7c2053b849bfa65dd79468a00c0a";
+        private String storageUrl = "http://192.168.35.135:8080/v1/AUTH_09ec04a1f8d646ddad2fe3c5081a3bb1";
+        private String authToken = "cb7e7b60b33f4be2b7d049bdd6b875ae";
 
         public SwiftClient(SwiftConfig cfg)
         {
@@ -26,11 +26,24 @@ namespace SwiftLib
         public void Authenticate()
         {
             RestClient rc = GetRestClient();
-            RestRequest request = new RestRequest("v3/", Method.GET);
+            RestRequest request = new RestRequest("v2.0/", Method.GET);
             request.AddHeader("X-Auth-User", cfg.User);
             request.AddHeader("X-Auth-Key", cfg.Authkey);
+            request.AddHeader("X-Auth-Token", authToken);
+            request.AddHeader("tenantId", cfg.TenantId);
+
+            /*request.AddParameter("OS_USERNAME", cfg.User);
+            request.AddParameter("OS_PASSWORD", cfg.Authkey);
+            request.AddParameter("OS_TENANT_NAME", "admin");
+            request.AddParameter("OS_AUTH_URL", "http://192.168.35.135:5000/v3");
+            request.AddParameter("OS_PROJECT_NAME", "admin");
+            request.AddParameter("OS_VOLUME_API_VERSION", "2");
+            request.AddParameter("OS_SERVICE_TOKEN", "a682f596-76f3-11e3-b3b2-e716f9080d50");
+            request.AddParameter("OS_SERVICE_ENDPOINT", "http://192.168.35.135:5000/v3");*/
+            
             IRestResponse response = rc.Execute(request);
-            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            
+            /*if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 foreach (Parameter hdr in response.Headers)
                 {
@@ -43,8 +56,8 @@ namespace SwiftLib
             else
             {
                 throw new Exception("Authentication Failed. Error: " + response.ToString());
-            }
-
+            }*/
+            
             Debug.Print("Storage URL:" + storageUrl + "; " + "Auth Token: " + authToken);
         }
 
@@ -112,7 +125,7 @@ namespace SwiftLib
            if (response.StatusCode != System.Net.HttpStatusCode.OK &&
                 response.StatusCode != System.Net.HttpStatusCode.Created)
             {
-                throw new Exception("Error in creating object. Error:" + response.ToString());
+                throw new Exception("Error in creating object. Error:" + response.StatusCode + response.ToString());
             }
         }
 
@@ -121,9 +134,17 @@ namespace SwiftLib
         {
             RestClient rc = GetRestClient();
             containerName = RemoveLeadingSlash(containerName);
-            IRestRequest request = GetRequest(storageUrl + "/" + containerName, Method.GET, "format=json");
+            IRestRequest request = GetRequest(storageUrl + "/" + containerName, Method.GET, "?format=json");
             IRestResponse response = rc.Execute(request);
-            return FileUtil.GetSwiftFileInfoList(response.Content);
+            if (response.StatusCode != System.Net.HttpStatusCode.OK &&
+                response.StatusCode != System.Net.HttpStatusCode.Created)
+            {
+                throw new Exception("Error in getting object. Error:" + response.StatusCode + response.ToString());
+            }
+            else
+            {
+                return FileUtil.GetSwiftFileInfoList(response.Content);
+            }
         }
 
         // get file
