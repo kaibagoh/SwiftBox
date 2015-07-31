@@ -29,6 +29,7 @@ namespace SwiftSync
             cfg.Url = System.Configuration.ConfigurationManager.AppSettings.Get("SwiftUrl");
             cfg.User = System.Configuration.ConfigurationManager.AppSettings.Get("User");
             cfg.Authkey = System.Configuration.ConfigurationManager.AppSettings.Get("AuthKey");
+            cfg.TenantId = System.Configuration.ConfigurationManager.AppSettings.Get("TenantId");
             cfg.BoxFolder = System.Configuration.ConfigurationManager.AppSettings.Get("BoxFolder");
             cfg.DownloadFolder = System.Configuration.ConfigurationManager.AppSettings.Get("DownloadFolder");
         }
