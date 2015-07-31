@@ -7,6 +7,5 @@ C:\Dev\openstack\swiftbox\SwiftLib\obj\Debug\SwiftLib.pdb
 C:\Users\dsi\Swiftbox\SwiftLib\bin\Debug\SwiftLib.dll
 C:\Users\dsi\Swiftbox\SwiftLib\bin\Debug\SwiftLib.pdb
 C:\Users\dsi\Swiftbox\SwiftLib\bin\Debug\RestSharp.dll
-C:\Users\dsi\Swiftbox\SwiftLib\obj\Debug\SwiftLib.csprojResolveAssemblyReference.cache
 C:\Users\dsi\Swiftbox\SwiftLib\obj\Debug\SwiftLib.dll
 C:\Users\dsi\Swiftbox\SwiftLib\obj\Debug\SwiftLib.pdb
